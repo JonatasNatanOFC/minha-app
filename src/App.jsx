@@ -4,14 +4,13 @@ import Footer from "./components/Footer.jsx";
 import { Container } from "react-bootstrap";
 
 function App() {
-
   return (
     <Container>
       <Header></Header>
       <Main></Main>
       <Footer></Footer>
     </Container>
-  )
+  );
 }
 
-export default App
+export default App;

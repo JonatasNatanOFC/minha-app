@@ -1,17 +1,18 @@
 import { Carousel } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import PropTypes from "prop-types";
+import "./Carousels.css";
 
-const Carousels = ({ images = [] }) => {
+const Carousels = ({ itens = [] }) => {
   return (
     <Carousel>
-      {images.map((image, i) => {
+      {itens.map((item, i) => {
         return (
           <Carousel.Item key={i}>
-            <Image src={image} />
+            <Image src={item.imagemUrl} />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>{item.titulo}</h3>
+              <p>{item.descricao}</p>
             </Carousel.Caption>
           </Carousel.Item>
         );
@@ -21,7 +22,7 @@ const Carousels = ({ images = [] }) => {
 };
 
 Carousels.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string),
+  itens: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Carousels;
